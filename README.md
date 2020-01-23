@@ -23,7 +23,7 @@ A light MVVM currency convertor app with support for multiple currencies and cur
 
 ## Acknowledgements & Frameworks used
 
-MoneyTest is currently using:
+MoneyTest is currently using [ExchangeRatesAPI.io](https://api.exchangeratesapi.io/) and:
 
  - [Alamofire](https://github.com/Alamofire/Alamofire)
  - [AlamofireObjectMapper](https://github.com/tristanhimmelman/AlamofireObjectMapper)
@@ -31,5 +31,6 @@ MoneyTest is currently using:
  - [PKHUD](https://github.com/pkluz/PKHUD)
  - [Charts](https://github.com/danielgindi/Charts)
  - [Alerts & Pickers](https://github.com/dillidon/alerts-and-pickers)
+
 
 All icons used in MoneyTest are designed by Icons8.com and available [here](http://icons8.com).

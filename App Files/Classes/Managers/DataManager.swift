@@ -44,7 +44,7 @@ class DataManager {
 		self.availableCurrencies = currencyArray
 	}
 	
-	func getAvailableCurrencies() -> [String]? {
-		return self.availableCurrencies
+	func getAvailableCurrencies() -> [String] {
+		return self.availableCurrencies ?? [Constants.UserDefaultKeys.defaultCurrency]
 	}
 }

@@ -41,12 +41,10 @@ class SettingsViewController: BaseViewController {
 	
 	@IBAction func setCurrencyButtonAction(_ sender: Any) {
 		var rowIndex = 0
-		if let availableCurrencies = DataManager.sharedInstance.getAvailableCurrencies() {
-			self.currencyDataSource = availableCurrencies
-			let currentCurrency = DataManager.sharedInstance.getDefaultCurrency()
-			if self.currencyDataSource.contains(currentCurrency) {
-				rowIndex = self.currencyDataSource.firstIndex(of: currentCurrency)!
-			}
+		self.currencyDataSource = DataManager.sharedInstance.getAvailableCurrencies()
+		let currentCurrency = DataManager.sharedInstance.getDefaultCurrency()
+		if self.currencyDataSource.contains(currentCurrency) {
+			rowIndex = self.currencyDataSource.firstIndex(of: currentCurrency)!
 		}
 		
 		let alert = UIAlertController(title: "Set default currency", message: nil, preferredStyle: .actionSheet)

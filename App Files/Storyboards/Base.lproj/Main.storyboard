@@ -161,18 +161,19 @@
                                 <rect key="frame" x="15" y="59" width="345" height="32"/>
                                 <segments>
                                     <segment title="RON"/>
+                                    <segment title="GBP"/>
                                     <segment title="USD"/>
                                     <segment title="BGN"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Showing the development of EUR in the last 10 days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJV-sP-BJY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Showing the development of EUR in the last 10 days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cJV-sP-BJY">
                                 <rect key="frame" x="15" y="589.5" width="345" height="13.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQ5-D3-pnx" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="15" y="105" width="345" height="313"/>
+                                <rect key="frame" x="15" y="105" width="345" height="263"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
@@ -183,7 +184,7 @@
                             <constraint firstItem="tYz-Bc-fPb" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="15" id="BUm-dj-4Ta"/>
                             <constraint firstItem="tYz-Bc-fPb" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="15" id="DZu-1r-zwB"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="cJV-sP-BJY" secondAttribute="trailing" constant="15" id="OQa-n1-7Jd"/>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="gQ5-D3-pnx" secondAttribute="bottom" constant="200" id="VU8-yw-j2x"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="gQ5-D3-pnx" secondAttribute="bottom" constant="250" id="VU8-yw-j2x"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="tYz-Bc-fPb" secondAttribute="trailing" constant="15" id="cnb-PS-o0l"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="cJV-sP-BJY" secondAttribute="bottom" constant="15" id="qvC-tn-B3v"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="gQ5-D3-pnx" secondAttribute="trailing" constant="15" id="x4W-J7-aWP"/>

@@ -77,7 +77,8 @@ class HomeViewModel: NSObject {
 	
 	private func showError(error: String) {
 		print(error)
-		HUD.show(.labeledError(title: nil, subtitle: error))
+		HUD.flash(.labeledError(title: nil, subtitle: error), onView: nil, delay: Constants.Config.hudDurationOnScreen, completion: nil)
+		self.parent?.stopTimer()
 	}
 	
 	@objc func textFieldDidChange(_ textField: UITextField) {
@@ -85,13 +86,9 @@ class HomeViewModel: NSObject {
 	}
 	
 	@objc func baseCurrencyButtonAction() {
-		guard let availableCurrencies = DataManager.sharedInstance.getAvailableCurrencies() else {
-			return
-		}
-		
 		// weird contraint issues here, ios sdk bug since ios 12.2, walkaround available: https://stackoverflow.com/a/58666480/1880111
 		let actionSheet = UIAlertController(title: " ", message: "Select base currency", preferredStyle: .actionSheet)
-		for currency in availableCurrencies {
+		for currency in DataManager.sharedInstance.getAvailableCurrencies() {
 			let actionImage = UIImage(named: currency.lowercased())!.withRenderingMode(.alwaysOriginal)
 			let actionItem = UIAlertAction(title: currency, style: .default, handler: { [weak self] _ in
 				DataManager.sharedInstance.saveDefaultCurrency(currency: currency)

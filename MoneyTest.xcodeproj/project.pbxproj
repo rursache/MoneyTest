@@ -14,7 +14,7 @@
 		173D87EF23D889DA0025C17F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173D87ED23D889DA0025C17F /* Main.storyboard */; };
 		173D87F123D889DA0025C17F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 173D87F023D889DA0025C17F /* Assets.xcassets */; };
 		173D87F423D889DA0025C17F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173D87F223D889DA0025C17F /* LaunchScreen.storyboard */; };
-		173D87FF23D889DA0025C17F /* oMoneyTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D87FE23D889DA0025C17F /* oMoneyTestTests.swift */; };
+		173D87FF23D889DA0025C17F /* MoneyTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D87FE23D889DA0025C17F /* MoneyTestTests.swift */; };
 		173D881023D88B140025C17F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D880F23D88B140025C17F /* SettingsViewController.swift */; };
 		173D881223D88B8A0025C17F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D881123D88B8A0025C17F /* Constants.swift */; };
 		173D881423D88D750025C17F /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D881323D88D750025C17F /* ApiManager.swift */; };
@@ -55,7 +55,7 @@
 		173D87F323D889DA0025C17F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		173D87F523D889DA0025C17F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		173D87FA23D889DA0025C17F /* MoneyTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		173D87FE23D889DA0025C17F /* oMoneyTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oMoneyTestTests.swift; sourceTree = "<group>"; };
+		173D87FE23D889DA0025C17F /* MoneyTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTestTests.swift; sourceTree = "<group>"; };
 		173D880023D889DA0025C17F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		173D880F23D88B140025C17F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		173D881123D88B8A0025C17F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 		173D87FD23D889DA0025C17F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				173D87FE23D889DA0025C17F /* oMoneyTestTests.swift */,
+				173D87FE23D889DA0025C17F /* MoneyTestTests.swift */,
 				173D880023D889DA0025C17F /* Info.plist */,
 			);
 			path = Tests;
@@ -441,7 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				173D87FF23D889DA0025C17F /* oMoneyTestTests.swift in Sources */,
+				173D87FF23D889DA0025C17F /* MoneyTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

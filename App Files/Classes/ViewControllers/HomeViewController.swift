@@ -50,11 +50,15 @@ class HomeViewController: BaseViewController {
 		// invalidate timer and start a new one so if refresh interval is changed, we respect that
 		self.refreshTimer?.invalidate()
 		self.refreshTimer = Timer.scheduledTimer(timeInterval: DataManager.sharedInstance.getRefreshInterval(), target: self, selector: #selector(self.fireTimer), userInfo: nil, repeats: false)
-		self.refreshData()
+		self.homeViewModel?.getCurrencyData()
+	}
+	
+	func stopTimer() {
+		self.refreshTimer?.invalidate()
 	}
 	
 	@objc func refreshData() {
-		self.homeViewModel?.getCurrencyData()
+		self.fireTimer() // fire timer on refresh; if internet was down, timer will resume without drawbacks
 	}
 	
 	@objc func showSettingsVC() {

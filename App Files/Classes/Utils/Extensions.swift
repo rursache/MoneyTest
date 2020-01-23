@@ -38,7 +38,7 @@ extension UIStoryboard {
 }
 
 extension UITextField {
-	// https://medium.com/swift2go/swift-add-keyboard-done-button-using-uitoolbar-c2bea50a12c7
+	// -- https://medium.com/swift2go/swift-add-keyboard-done-button-using-uitoolbar-c2bea50a12c7
     @IBInspectable var doneAccessory: Bool {
         get {
             return self.doneAccessory
@@ -67,4 +67,20 @@ extension UITextField {
     @objc func doneButtonAction() {
         self.resignFirstResponder()
     }
+	// --
+}
+
+extension Date {
+	// -- https://stackoverflow.com/a/20158940/1880111
+    var startOfDay: Date {
+        return Calendar.current.startOfDay(for: self)
+    }
+
+    var endOfDay: Date {
+        var components = DateComponents()
+        components.day = 1
+        components.second = -1
+        return Calendar.current.date(byAdding: components, to: startOfDay)!
+    }
+	// --
 }
