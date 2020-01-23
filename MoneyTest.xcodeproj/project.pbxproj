@@ -28,6 +28,7 @@
 		173D882623D983B40025C17F /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D882523D983B40025C17F /* HistoryViewModel.swift */; };
 		173D882A23D9DACD0025C17F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D882923D9DACD0025C17F /* DataManager.swift */; };
 		173D882C23D9F7010025C17F /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D882B23D9F7010025C17F /* CustomViews.swift */; };
+		173D882E23DA0D530025C17F /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D882D23DA0D520025C17F /* CustomPickerView.swift */; };
 		94DB3996B1E814C2DDC4BE0C /* Pods_MoneyTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8566477D09DCB124C8CFEA13 /* Pods_MoneyTestTests.framework */; };
 		DED2925A0F320E1E20C889CC /* Pods_MoneyTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CADEBFD383FFC3B6DA1CC6 /* Pods_MoneyTest.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		173D882523D983B40025C17F /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		173D882923D9DACD0025C17F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		173D882B23D9F7010025C17F /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
+		173D882D23DA0D520025C17F /* CustomPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
 		8566477D09DCB124C8CFEA13 /* Pods_MoneyTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		864D2FDFDDED5AB15F38458F /* Pods-MoneyTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyTestTests.release.xcconfig"; path = "Target Support Files/Pods-MoneyTestTests/Pods-MoneyTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF37753ED592698366F31890 /* Pods-oMoneyTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oMoneyTestTests.debug.xcconfig"; path = "Target Support Files/Pods-oMoneyTestTests/Pods-oMoneyTestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				173D881123D88B8A0025C17F /* Constants.swift */,
 				173D881C23D897E50025C17F /* Extensions.swift */,
 				173D882B23D9F7010025C17F /* CustomViews.swift */,
+				173D882D23DA0D520025C17F /* CustomPickerView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				173D882623D983B40025C17F /* HistoryViewModel.swift in Sources */,
 				173D881B23D892AF0025C17F /* HistoryRatesModel.swift in Sources */,
 				173D87E823D889DA0025C17F /* SceneDelegate.swift in Sources */,
+				173D882E23DA0D530025C17F /* CustomPickerView.swift in Sources */,
 				173D881D23D897E50025C17F /* Extensions.swift in Sources */,
 				173D881223D88B8A0025C17F /* Constants.swift in Sources */,
 			);

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIViewController {
+extension UIStoryboard {
 	enum ViewControllers: String {
 		case home = "homeVC"
 		case history = "historyVC"
@@ -17,22 +17,22 @@ extension UIViewController {
 	}
 	
     enum StoryBoard: String {
-        case main
+        case main = "Main"
 		
         func instance(_ vc: String) -> UIViewController {
             return UIStoryboard(name: self.rawValue, bundle: Bundle.main).instantiateViewController(withIdentifier: vc)
         }
     }
     
-    class func Home() -> HomeViewController {
+    class func getHomeVC() -> HomeViewController {
 		return StoryBoard.main.instance(ViewControllers.home.rawValue) as! HomeViewController
     }
 	
-	class func History() -> HistoryViewController {
+	class func getHistoryVC() -> HistoryViewController {
 		return StoryBoard.main.instance(ViewControllers.history.rawValue) as! HistoryViewController
     }
 	
-	class func Settings() -> SettingsViewController {
+	class func getSettingsVC() -> SettingsViewController {
 		return StoryBoard.main.instance(ViewControllers.settings.rawValue) as! SettingsViewController
     }
 }

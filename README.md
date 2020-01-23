@@ -1,7 +1,7 @@
 # MoneyTest
 
 <p align="left">
-  <img width="150" height="150" src="https://github.com/rursache/MoneyTest/tree/master/App%20Files/Assets.xcassets/AppIcon.appiconset/152.png" />
+  <img width="150" height="150" src="https://raw.githubusercontent.com/rursache/MoneyTest/master/App%20Files/Assets.xcassets/AppIcon.appiconset/152.png?token=AA472EEOSP47YAHZUODXPI26GME24" />
 </p>
 
 A light MVVM currency convertor app with support for multiple currencies and currency charts build in Swift 5.
@@ -30,5 +30,6 @@ MoneyTest is currently using:
  - [ObjectMapper](https://github.com/tristanhimmelman/ObjectMapper)
  - [PKHUD](https://github.com/pkluz/PKHUD)
  - [Charts](https://github.com/danielgindi/Charts)
+ - [Alerts & Pickers](https://github.com/dillidon/alerts-and-pickers)
 
 All icons used in MoneyTest are designed by Icons8.com and available [here](http://icons8.com).

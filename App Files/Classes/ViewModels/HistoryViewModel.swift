@@ -122,7 +122,7 @@ class HistoryViewModel: NSObject, ChartViewDelegate {
         data.setDrawValues(true)
         
 		self.chartView?.data = data
-		self.chartView?.animate(xAxisDuration: animate ? 2 : 0)
+		self.chartView?.animate(xAxisDuration: animate ? 1.5 : 0)
 		
 		self.bottomLabel?.text = "Showing the development of \(self.baseCurrency) in the last \(String(format: "%d", self.cleanDataSource.count)) days"
 	}

@@ -42,6 +42,7 @@ class HomeViewController: BaseViewController {
 		super.setupUI()
 		
 		self.navigationItem.title = "Currency Convertor"
+		self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .done, target: self, action: #selector(self.showSettingsVC))
 		self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(self.refreshData))
 	}
 	
@@ -54,5 +55,10 @@ class HomeViewController: BaseViewController {
 	
 	@objc func refreshData() {
 		self.homeViewModel?.getCurrencyData()
+	}
+	
+	@objc func showSettingsVC() {
+		let settingsVC = UINavigationController(rootViewController: UIStoryboard.getSettingsVC())
+		self.present(settingsVC, animated: true, completion: nil)
 	}
 }

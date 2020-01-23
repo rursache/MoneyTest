@@ -11,27 +11,24 @@ import UIKit
 class SettingsViewController: BaseViewController {
 
 	@IBOutlet weak var refreshSegControl: UISegmentedControl!
-	@IBOutlet weak var currencyPicker: UIPickerView!
+	@IBOutlet weak var setCurrencyButton: UIButton!
 	
 	private var currencyDataSource = [String]()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		
-	}
-	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		
 		self.loadSavedData()
 	}
 	
-	override func setupBindings() {
-		super.setupBindings()
+	override func setupUI() {
+		super.setupUI()
 		
-		self.currencyPicker.delegate = self
-		self.currencyPicker.dataSource = self
+		self.updateButtonText()
+		self.setCurrencyButton.layer.cornerRadius = 12
+		self.setCurrencyButton.layer.borderColor = UIColor.label.cgColor
+		self.setCurrencyButton.layer.borderWidth = 1
+		self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(self.closeVC))
 	}
 	
 	@IBAction func refreshSegControlAction(_ sender: UISegmentedControl) {
@@ -42,16 +39,29 @@ class SettingsViewController: BaseViewController {
 		DataManager.sharedInstance.saveRefreshInterval(interval: doubleSegmentTitle)
 	}
 	
-	func loadSavedData() {
-		// picker
+	@IBAction func setCurrencyButtonAction(_ sender: Any) {
+		var rowIndex = 0
 		if let availableCurrencies = DataManager.sharedInstance.getAvailableCurrencies() {
 			self.currencyDataSource = availableCurrencies
 			let currentCurrency = DataManager.sharedInstance.getDefaultCurrency()
 			if self.currencyDataSource.contains(currentCurrency) {
-				self.currencyPicker.selectRow(self.currencyDataSource.firstIndex(of: currentCurrency)!, inComponent: 0, animated: true)
+				rowIndex = self.currencyDataSource.firstIndex(of: currentCurrency)!
 			}
 		}
 		
+		let alert = UIAlertController(title: "Set default currency", message: nil, preferredStyle: .actionSheet)
+		alert.addPickerView(values: [self.currencyDataSource], initialSelection: (column: 0, row: rowIndex)) { vc, picker, index, values in
+			DataManager.sharedInstance.saveDefaultCurrency(currency: self.currencyDataSource[index.row])
+			
+			DispatchQueue.main.async {
+				self.updateButtonText()
+			}
+		}
+		alert.addAction(UIAlertAction(title: "Save", style: .cancel, handler: nil))
+		self.present(alert, animated: true, completion: nil)
+	}
+	
+	func loadSavedData() {
 		// seg controller (try matching saved value to a segment and select it)
 		for index in 0...self.refreshSegControl.numberOfSegments-1 {
 			if self.refreshSegControl.titleForSegment(at: index) == String(format: "%.0f", DataManager.sharedInstance.getRefreshInterval()) {
@@ -60,22 +70,12 @@ class SettingsViewController: BaseViewController {
 			}
 		}
 	}
-}
-
-extension SettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-	func numberOfComponents(in pickerView: UIPickerView) -> Int {
-		return 1
+	
+	private func updateButtonText() {
+		self.setCurrencyButton.setTitle("Change default currency (\(DataManager.sharedInstance.getDefaultCurrency()))", for: .normal)
 	}
 	
-	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-		return self.currencyDataSource.count
-	}
-	
-	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-		return self.currencyDataSource[row]
-	}
-	
-	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-		DataManager.sharedInstance.saveDefaultCurrency(currency: self.currencyDataSource[row])
+	@objc func closeVC() {
+		self.dismiss(animated: true, completion: nil)
 	}
 }
