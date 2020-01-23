@@ -27,8 +27,9 @@
 		173D882423D8A2670025C17F /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D882323D8A2670025C17F /* HomeCell.swift */; };
 		173D882623D983B40025C17F /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D882523D983B40025C17F /* HistoryViewModel.swift */; };
 		173D882A23D9DACD0025C17F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D882923D9DACD0025C17F /* DataManager.swift */; };
-		E7CEF2BBEB654FB42065B3B8 /* Pods_oMoneyTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C03A84E988C159A541ADDB15 /* Pods_oMoneyTestTests.framework */; };
-		E9AEAC63D9C8CFA89D933682 /* Pods_oMoneyTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AD98C3FFBC33A9839A6952 /* Pods_oMoneyTest.framework */; };
+		173D882C23D9F7010025C17F /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D882B23D9F7010025C17F /* CustomViews.swift */; };
+		94DB3996B1E814C2DDC4BE0C /* Pods_MoneyTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8566477D09DCB124C8CFEA13 /* Pods_MoneyTestTests.framework */; };
+		DED2925A0F320E1E20C889CC /* Pods_MoneyTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CADEBFD383FFC3B6DA1CC6 /* Pods_MoneyTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04AD98C3FFBC33A9839A6952 /* Pods_oMoneyTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oMoneyTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		100E4F42DBF76E4046F79B01 /* Pods-oMoneyTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oMoneyTest.debug.xcconfig"; path = "Target Support Files/Pods-oMoneyTest/Pods-oMoneyTest.debug.xcconfig"; sourceTree = "<group>"; };
-		173D87E223D889DA0025C17F /* oMoneyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oMoneyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		173D87E223D889DA0025C17F /* MoneyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		173D87E523D889DA0025C17F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		173D87E723D889DA0025C17F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		173D87E923D889DA0025C17F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		173D87F023D889DA0025C17F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		173D87F323D889DA0025C17F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		173D87F523D889DA0025C17F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		173D87FA23D889DA0025C17F /* oMoneyTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oMoneyTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		173D87FA23D889DA0025C17F /* MoneyTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		173D87FE23D889DA0025C17F /* oMoneyTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oMoneyTestTests.swift; sourceTree = "<group>"; };
 		173D880023D889DA0025C17F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		173D880F23D88B140025C17F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -68,9 +68,15 @@
 		173D882323D8A2670025C17F /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		173D882523D983B40025C17F /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		173D882923D9DACD0025C17F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		173D882B23D9F7010025C17F /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
+		8566477D09DCB124C8CFEA13 /* Pods_MoneyTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		864D2FDFDDED5AB15F38458F /* Pods-MoneyTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyTestTests.release.xcconfig"; path = "Target Support Files/Pods-MoneyTestTests/Pods-MoneyTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF37753ED592698366F31890 /* Pods-oMoneyTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oMoneyTestTests.debug.xcconfig"; path = "Target Support Files/Pods-oMoneyTestTests/Pods-oMoneyTestTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C03A84E988C159A541ADDB15 /* Pods_oMoneyTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oMoneyTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B154AF16BF68F0F7525881AD /* Pods-MoneyTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyTest.release.xcconfig"; path = "Target Support Files/Pods-MoneyTest/Pods-MoneyTest.release.xcconfig"; sourceTree = "<group>"; };
 		C5245FEC21C1FC699BF907E9 /* Pods-oMoneyTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oMoneyTestTests.release.xcconfig"; path = "Target Support Files/Pods-oMoneyTestTests/Pods-oMoneyTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		C65112B49EA22938FABD9492 /* Pods-MoneyTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyTestTests.debug.xcconfig"; path = "Target Support Files/Pods-MoneyTestTests/Pods-MoneyTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C71852A28DC5B1B741EE39B6 /* Pods-MoneyTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyTest.debug.xcconfig"; path = "Target Support Files/Pods-MoneyTest/Pods-MoneyTest.debug.xcconfig"; sourceTree = "<group>"; };
+		E8CADEBFD383FFC3B6DA1CC6 /* Pods_MoneyTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F100C747A79AC053CDD8E698 /* Pods-oMoneyTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oMoneyTest.release.xcconfig"; path = "Target Support Files/Pods-oMoneyTest/Pods-oMoneyTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9AEAC63D9C8CFA89D933682 /* Pods_oMoneyTest.framework in Frameworks */,
+				DED2925A0F320E1E20C889CC /* Pods_MoneyTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7CEF2BBEB654FB42065B3B8 /* Pods_oMoneyTestTests.framework in Frameworks */,
+				94DB3996B1E814C2DDC4BE0C /* Pods_MoneyTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,8 +114,8 @@
 		173D87E323D889DA0025C17F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				173D87E223D889DA0025C17F /* oMoneyTest.app */,
-				173D87FA23D889DA0025C17F /* oMoneyTestTests.xctest */,
+				173D87E223D889DA0025C17F /* MoneyTest.app */,
+				173D87FA23D889DA0025C17F /* MoneyTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,6 +169,7 @@
 			children = (
 				173D881123D88B8A0025C17F /* Constants.swift */,
 				173D881C23D897E50025C17F /* Extensions.swift */,
+				173D882B23D9F7010025C17F /* CustomViews.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -221,6 +228,10 @@
 				F100C747A79AC053CDD8E698 /* Pods-oMoneyTest.release.xcconfig */,
 				AF37753ED592698366F31890 /* Pods-oMoneyTestTests.debug.xcconfig */,
 				C5245FEC21C1FC699BF907E9 /* Pods-oMoneyTestTests.release.xcconfig */,
+				C71852A28DC5B1B741EE39B6 /* Pods-MoneyTest.debug.xcconfig */,
+				B154AF16BF68F0F7525881AD /* Pods-MoneyTest.release.xcconfig */,
+				C65112B49EA22938FABD9492 /* Pods-MoneyTestTests.debug.xcconfig */,
+				864D2FDFDDED5AB15F38458F /* Pods-MoneyTestTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -228,8 +239,8 @@
 		CFAC6BA45CC69D3A95407393 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				04AD98C3FFBC33A9839A6952 /* Pods_oMoneyTest.framework */,
-				C03A84E988C159A541ADDB15 /* Pods_oMoneyTestTests.framework */,
+				E8CADEBFD383FFC3B6DA1CC6 /* Pods_MoneyTest.framework */,
+				8566477D09DCB124C8CFEA13 /* Pods_MoneyTestTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -237,9 +248,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		173D87E123D889DA0025C17F /* oMoneyTest */ = {
+		173D87E123D889DA0025C17F /* MoneyTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 173D880323D889DA0025C17F /* Build configuration list for PBXNativeTarget "oMoneyTest" */;
+			buildConfigurationList = 173D880323D889DA0025C17F /* Build configuration list for PBXNativeTarget "MoneyTest" */;
 			buildPhases = (
 				D172EBF49CFCF1A19E985EEF /* [CP] Check Pods Manifest.lock */,
 				173D87DE23D889DA0025C17F /* Sources */,
@@ -251,14 +262,14 @@
 			);
 			dependencies = (
 			);
-			name = oMoneyTest;
+			name = MoneyTest;
 			productName = oMoneyTest;
-			productReference = 173D87E223D889DA0025C17F /* oMoneyTest.app */;
+			productReference = 173D87E223D889DA0025C17F /* MoneyTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		173D87F923D889DA0025C17F /* oMoneyTestTests */ = {
+		173D87F923D889DA0025C17F /* MoneyTestTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 173D880623D889DA0025C17F /* Build configuration list for PBXNativeTarget "oMoneyTestTests" */;
+			buildConfigurationList = 173D880623D889DA0025C17F /* Build configuration list for PBXNativeTarget "MoneyTestTests" */;
 			buildPhases = (
 				97F73443056695E5FA3B85AE /* [CP] Check Pods Manifest.lock */,
 				173D87F623D889DA0025C17F /* Sources */,
@@ -270,9 +281,9 @@
 			dependencies = (
 				173D87FC23D889DA0025C17F /* PBXTargetDependency */,
 			);
-			name = oMoneyTestTests;
+			name = MoneyTestTests;
 			productName = oMoneyTestTests;
-			productReference = 173D87FA23D889DA0025C17F /* oMoneyTestTests.xctest */;
+			productReference = 173D87FA23D889DA0025C17F /* MoneyTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -294,7 +305,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 173D87DD23D889DA0025C17F /* Build configuration list for PBXProject "oMoneyTest" */;
+			buildConfigurationList = 173D87DD23D889DA0025C17F /* Build configuration list for PBXProject "MoneyTest" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -307,8 +318,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				173D87E123D889DA0025C17F /* oMoneyTest */,
-				173D87F923D889DA0025C17F /* oMoneyTestTests */,
+				173D87E123D889DA0025C17F /* MoneyTest */,
+				173D87F923D889DA0025C17F /* MoneyTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -340,15 +351,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-oMoneyTest/Pods-oMoneyTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MoneyTest/Pods-MoneyTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-oMoneyTest/Pods-oMoneyTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MoneyTest/Pods-MoneyTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-oMoneyTest/Pods-oMoneyTest-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoneyTest/Pods-MoneyTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		97F73443056695E5FA3B85AE /* [CP] Check Pods Manifest.lock */ = {
@@ -366,7 +377,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-oMoneyTestTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MoneyTestTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -388,7 +399,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-oMoneyTest-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MoneyTest-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -404,6 +415,7 @@
 			files = (
 				173D87EC23D889DA0025C17F /* HistoryViewController.swift in Sources */,
 				173D882A23D9DACD0025C17F /* DataManager.swift in Sources */,
+				173D882C23D9F7010025C17F /* CustomViews.swift in Sources */,
 				173D881023D88B140025C17F /* SettingsViewController.swift in Sources */,
 				173D87EA23D889DA0025C17F /* HomeViewController.swift in Sources */,
 				173D881723D8913B0025C17F /* ApiClient.swift in Sources */,
@@ -434,7 +446,7 @@
 /* Begin PBXTargetDependency section */
 		173D87FC23D889DA0025C17F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 173D87E123D889DA0025C17F /* oMoneyTest */;
+			target = 173D87E123D889DA0025C17F /* MoneyTest */;
 			targetProxy = 173D87FB23D889DA0025C17F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -575,7 +587,7 @@
 		};
 		173D880423D889DA0025C17F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 100E4F42DBF76E4046F79B01 /* Pods-oMoneyTest.debug.xcconfig */;
+			baseConfigurationReference = C71852A28DC5B1B741EE39B6 /* Pods-MoneyTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -594,7 +606,7 @@
 		};
 		173D880523D889DA0025C17F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F100C747A79AC053CDD8E698 /* Pods-oMoneyTest.release.xcconfig */;
+			baseConfigurationReference = B154AF16BF68F0F7525881AD /* Pods-MoneyTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -613,7 +625,7 @@
 		};
 		173D880723D889DA0025C17F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF37753ED592698366F31890 /* Pods-oMoneyTestTests.debug.xcconfig */;
+			baseConfigurationReference = C65112B49EA22938FABD9492 /* Pods-MoneyTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -630,13 +642,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/oMoneyTest.app/oMoneyTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyTest.app/MoneyTest";
 			};
 			name = Debug;
 		};
 		173D880823D889DA0025C17F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5245FEC21C1FC699BF907E9 /* Pods-oMoneyTestTests.release.xcconfig */;
+			baseConfigurationReference = 864D2FDFDDED5AB15F38458F /* Pods-MoneyTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -653,14 +665,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/oMoneyTest.app/oMoneyTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyTest.app/MoneyTest";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		173D87DD23D889DA0025C17F /* Build configuration list for PBXProject "oMoneyTest" */ = {
+		173D87DD23D889DA0025C17F /* Build configuration list for PBXProject "MoneyTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				173D880123D889DA0025C17F /* Debug */,
@@ -669,7 +681,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		173D880323D889DA0025C17F /* Build configuration list for PBXNativeTarget "oMoneyTest" */ = {
+		173D880323D889DA0025C17F /* Build configuration list for PBXNativeTarget "MoneyTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				173D880423D889DA0025C17F /* Debug */,
@@ -678,7 +690,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		173D880623D889DA0025C17F /* Build configuration list for PBXNativeTarget "oMoneyTestTests" */ = {
+		173D880623D889DA0025C17F /* Build configuration list for PBXNativeTarget "MoneyTestTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				173D880723D889DA0025C17F /* Debug */,

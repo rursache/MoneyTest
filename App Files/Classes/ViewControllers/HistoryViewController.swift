@@ -15,7 +15,7 @@ class HistoryViewController: BaseViewController {
 	@IBOutlet weak var chartView: LineChartView!
 	@IBOutlet weak var bottomLabel: UILabel!
 	
-	var viewModel: HistoryViewModel?
+	var historyViewModel: HistoryViewModel?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -26,8 +26,8 @@ class HistoryViewController: BaseViewController {
 	override func setupBindings() {
 		super.setupBindings()
 		
-		self.viewModel = HistoryViewModel(parent: self, chartView: self.chartView, bottomLabel: self.bottomLabel, segControl: self.segmentControl)
-		self.viewModel?.getHistoryData()
+		self.historyViewModel = HistoryViewModel(parent: self, chartView: self.chartView, bottomLabel: self.bottomLabel, segControl: self.segmentControl)
+		self.historyViewModel?.getHistoryData()
 	}
 
 	override func setupUI() {
@@ -37,7 +37,19 @@ class HistoryViewController: BaseViewController {
 	}
 	
 	@objc func refreshData() {
-		self.viewModel?.getHistoryData()
+		self.historyViewModel?.getHistoryData()
 	}
+	
+	// catch darkmode change to reload chart appearance
+	override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+		// traitCollectionDidChange gets fired multiple times, only catch the valid ones
+        guard UIApplication.shared.applicationState == .inactive else {
+            return
+        }
+
+		self.historyViewModel?.loadChartView(animate: false)
+    }
 }
 

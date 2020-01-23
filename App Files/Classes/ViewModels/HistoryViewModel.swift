@@ -82,7 +82,7 @@ class HistoryViewModel: NSObject, ChartViewDelegate {
         self.chartView?.legend.enabled = false
 	}
 	
-	private func loadChartView(animate: Bool = false) {
+	func loadChartView(animate: Bool = false) {
 		// let's keep DATE: VALUE only, currency is set already
 		self.cleanDataSource = [[String: Double]]()
 		for key in self.responseDataSource.keys {
@@ -111,7 +111,7 @@ class HistoryViewModel: NSObject, ChartViewDelegate {
         dataSet.lineWidth = 0
         dataSet.setCircleColor(.label)
 		dataSet.fillAlpha = 1
-        dataSet.fill = Fill(linearGradient: CGGradient(colorsSpace: nil, colors: [UIColor.systemRed.cgColor, UIColor.systemBackground.cgColor] as CFArray, locations: nil)!, angle: 270)
+		dataSet.fill = Fill(linearGradient: CGGradient(colorsSpace: nil, colors: [Constants.Config.appColor.cgColor, UIColor.systemBackground.cgColor] as CFArray, locations: nil)!, angle: 270)
         dataSet.drawHorizontalHighlightIndicatorEnabled = false
 		dataSet.drawFilledEnabled = true
 		dataSet.valueFormatter = CurrencyValueFormatter()

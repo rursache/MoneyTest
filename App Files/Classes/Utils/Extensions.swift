@@ -38,7 +38,8 @@ extension UIViewController {
 }
 
 extension UITextField {
-    @IBInspectable var doneAccessory: Bool{
+	// https://medium.com/swift2go/swift-add-keyboard-done-button-using-uitoolbar-c2bea50a12c7
+    @IBInspectable var doneAccessory: Bool {
         get {
             return self.doneAccessory
         }

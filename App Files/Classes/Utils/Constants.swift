@@ -29,6 +29,8 @@ struct Configuration {
 
 struct Constants {
     struct Config {
+		static let appName = "oMoney Test"
+		static let appColor = UIColor(red: 1.00, green: 0.44, blue: 0.13, alpha: 1.0)
 		static let defaultRefreshInterval: Double = 3
 		static let defaultCurrency = "EUR"
 	}

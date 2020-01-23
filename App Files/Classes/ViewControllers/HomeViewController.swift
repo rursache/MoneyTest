@@ -10,12 +10,12 @@ import UIKit
 
 class HomeViewController: BaseViewController {
 	
-	@IBOutlet weak var baseCurrencyLabel: UILabel!
+	@IBOutlet weak var baseCurrencyButton: CenteredButton!
 	@IBOutlet weak var valueTextField: UITextField!
 	@IBOutlet weak var lastUpdateLabel: UILabel!
 	@IBOutlet weak var tableView: UITableView!
 	
-	var homeModel: HomeViewModel?
+	var homeViewModel: HomeViewModel?
 	var refreshTimer: Timer?
 
 	override func viewDidLoad() {
@@ -33,7 +33,7 @@ class HomeViewController: BaseViewController {
 	override func setupBindings() {
 		super.setupBindings()
 		
-		self.homeModel = HomeViewModel(parent: self, tableView: self.tableView, lastUpdatedLabel: self.lastUpdateLabel, valueTextField: self.valueTextField, baseCurrencyLabel: self.baseCurrencyLabel)
+		self.homeViewModel = HomeViewModel(parent: self, tableView: self.tableView, lastUpdatedLabel: self.lastUpdateLabel, valueTextField: self.valueTextField, baseCurrencyButton: self.baseCurrencyButton)
 		
 		self.fireTimer()
 	}
@@ -53,6 +53,6 @@ class HomeViewController: BaseViewController {
 	}
 	
 	@objc func refreshData() {
-		self.homeModel?.getCurrencyData()
+		self.homeViewModel?.getCurrencyData()
 	}
 }

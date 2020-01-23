@@ -1,6 +1,6 @@
 platform :ios, '13.2'
 
-target 'oMoneyTest' do
+target 'MoneyTest' do
   use_frameworks!
   
   # Networking
@@ -14,7 +14,7 @@ target 'oMoneyTest' do
   pod 'PKHUD'
   pod 'Charts'
 
-  target 'oMoneyTestTests' do
+  target 'MoneyTestTests' do
     inherit! :search_paths
   end
 
