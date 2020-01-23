@@ -13,15 +13,16 @@ import PKHUD
 
 class HistoryViewModel: NSObject, ChartViewDelegate {
 	
-	var parent: HistoryViewController?
-	var segmentControl: UISegmentedControl?
-	var chartView: LineChartView?
-	var bottomLabel: UILabel?
+	private var parent: HistoryViewController?
+	private var segmentControl: UISegmentedControl?
+	private var chartView: LineChartView?
+	private var bottomLabel: UILabel?
 	
 	private var responseDataSource = [String: [String: Double]]()
 	private var cleanDataSource = [[String: Double]]()
 	
 	private var baseCurrency = String()
+	var historyDescriptionString = String()
 	
 	init(parent: HistoryViewController, chartView: LineChartView, bottomLabel: UILabel, segControl: UISegmentedControl) {
 		super.init()
@@ -126,7 +127,7 @@ class HistoryViewModel: NSObject, ChartViewDelegate {
 		self.chartView?.data = data
 		self.chartView?.animate(xAxisDuration: animate ? 1.5 : 0)
 		
-		self.bottomLabel?.text = "Showing the development of \(self.baseCurrency) against EUR in the last \(String(format: "%d", self.cleanDataSource.count)) days"
+		self.historyDescriptionString = "Showing the development of \(self.baseCurrency) against EUR in the last \(String(format: "%d", self.cleanDataSource.count)) days"
 	}
 	
 	private func showError(error: String) {

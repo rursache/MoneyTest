@@ -158,7 +158,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tYz-Bc-fPb">
-                                <rect key="frame" x="15" y="59" width="345" height="32"/>
+                                <rect key="frame" x="15" y="59" width="345" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="DiL-Gg-yWL"/>
+                                </constraints>
                                 <segments>
                                     <segment title="RON"/>
                                     <segment title="GBP"/>
@@ -173,7 +176,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQ5-D3-pnx" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="15" y="105" width="345" height="263"/>
+                                <rect key="frame" x="15" y="109" width="345" height="259"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
@@ -196,6 +199,7 @@
                     <navigationItem key="navigationItem" id="8tf-Kw-SHL"/>
                     <connections>
                         <outlet property="bottomLabel" destination="cJV-sP-BJY" id="6fP-Bz-5XP"/>
+                        <outlet property="chartBottomConstraint" destination="VU8-yw-j2x" id="qlQ-cj-xr1"/>
                         <outlet property="chartView" destination="gQ5-D3-pnx" id="ecR-dy-fhl"/>
                         <outlet property="segmentControl" destination="tYz-Bc-fPb" id="qa5-Wz-ZEY"/>
                     </connections>
@@ -236,6 +240,7 @@
                                             <segment title="3"/>
                                             <segment title="5"/>
                                             <segment title="15"/>
+                                            <segment title="30"/>
                                         </segments>
                                         <connections>
                                             <action selector="refreshSegControlAction:" destination="m0B-LI-8Mw" eventType="valueChanged" id="eH8-pn-IXN"/>
@@ -255,7 +260,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                         <state key="normal" title="Change default currency">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
                                             <action selector="setCurrencyButtonAction:" destination="m0B-LI-8Mw" eventType="touchUpInside" id="loY-hp-Xgg"/>
@@ -264,7 +269,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ygm-xv-jnt" firstAttribute="trailing" secondItem="ukX-ZM-I8i" secondAttribute="trailing" constant="15" id="9pL-Pg-Vr0"/>
                             <constraint firstItem="ukX-ZM-I8i" firstAttribute="leading" secondItem="ygm-xv-jnt" secondAttribute="leading" constant="15" id="JCR-Xr-rhN"/>

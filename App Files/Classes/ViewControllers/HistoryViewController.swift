@@ -14,6 +14,7 @@ class HistoryViewController: BaseViewController {
 	@IBOutlet weak var segmentControl: UISegmentedControl!
 	@IBOutlet weak var chartView: LineChartView!
 	@IBOutlet weak var bottomLabel: UILabel!
+	@IBOutlet weak var chartBottomConstraint: NSLayoutConstraint!
 	
 	var historyViewModel: HistoryViewModel?
 	
@@ -33,11 +34,24 @@ class HistoryViewController: BaseViewController {
 	override func setupUI() {
 		super.setupUI()
 		
+		self.bottomLabel.isHidden = true
+		
+		self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "info.circle"), style: .done, target: self, action: #selector(self.showHistoryDescriptionAlert))
 		self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(self.refreshData))
 	}
 	
 	@objc func refreshData() {
 		self.historyViewModel?.getHistoryData()
+	}
+	
+	@objc func showHistoryDescriptionAlert() {
+		guard let historyDescString = self.historyViewModel?.historyDescriptionString else {
+			return
+		}
+		
+		let alert = UIAlertController(title: Constants.Config.appName, message: historyDescString, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+		self.present(alert, animated: true, completion: nil)
 	}
 	
 	// catch darkmode change to reload chart appearance
@@ -50,6 +64,16 @@ class HistoryViewController: BaseViewController {
         }
 
 		self.historyViewModel?.loadChartView(animate: false)
+    }
+	
+	override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+		
+        if UIDevice.current.orientation.isLandscape {
+			self.chartBottomConstraint.constant = 10
+        } else {
+            self.chartBottomConstraint.constant = 250
+        }
     }
 }
 

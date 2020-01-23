@@ -76,4 +76,14 @@ class SettingsViewController: BaseViewController {
 	@objc func closeVC() {
 		self.dismiss(animated: true, completion: nil)
 	}
+	
+	override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+		guard UIApplication.shared.applicationState == .inactive else {
+            return
+        }
+
+		self.setCurrencyButton.layer.borderColor = UIColor.label.cgColor // fix for cgColor not automatically switching to darkmode
+    }
 }

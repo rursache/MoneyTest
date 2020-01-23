@@ -17,8 +17,10 @@ class HomeViewModel: NSObject {
 	private var lastUpdatedLabel: UILabel?
 	private var valueTextField: UITextField?
 	private var baseCurrencyButton: UIButton?
+	
 	private var dataSource = [String: Double]()
 	private var arrayDataSource = [String]()
+	
 	private let refreshControl = UIRefreshControl()
 	
 	init(parent: HomeViewController, tableView: UITableView, lastUpdatedLabel: UILabel, valueTextField: UITextField, baseCurrencyButton: UIButton) {
