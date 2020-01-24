@@ -17,8 +17,8 @@ A light MVVM currency convertor app with support for multiple currencies and cur
 2. Run ```pod install``` in terminal to install required pods. Make sure you have [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) installed.
 
 ## Communication
-- If you **found a bug**, open an [issue](https://github.com/rursache/ToDoList/issues).
-- If you **have a feature request**, open an [issue](https://github.com/rursache/ToDoList/issues).
+- If you **found a bug**, open an [issue](https://github.com/rursache/MoneyTest/issues).
+- If you **have a feature request**, open an [issue](https://github.com/rursache/MoneyTest/issues).
 - If you **want to contribute**, submit a [pull request]().
 
 ## Acknowledgements & Frameworks used
